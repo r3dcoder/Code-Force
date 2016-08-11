@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    double x, y,minm = 999999999;;
+    cin>>x>>y;
+    long long int n;
+    cin>>n;
+
+    for(long long i=0; i<n; i++)
+    {
+        double a, b, c;
+
+        cin>>a>>b>>c;
+
+        double ans = sqrt(((x-a)*(x-a))+((y-b)*(y-b)));
+
+        double d = ans / c;
+
+        minm = min(minm, d);
+    }
+    printf("%.20lf\n", minm);
+
+
+    return 0;
+}
